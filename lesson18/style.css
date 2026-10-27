@@ -1,0 +1,61 @@
+#mercedes1 img{
+    transform: scale(1);
+    transition: .6s ease-in-out;
+}
+
+#mercedes1:hover img{
+    transform: scale(2.9);
+}
+
+#mercedes2 img{
+    margin-left:0 ;
+    transition: 1.9s ease-in-out;
+}
+#mercedes2:hover img{
+    margin-left: 90px;
+}
+
+#mercedes3 img{
+    filter: blur(3px);
+    transition: 1.9s ease-in-out;
+}
+#mercedes3:hover img{
+    filter: blur(0);
+    transform: scale(2.9);
+}
+
+#mercedes4 img{
+    filter: grayscale(100%);
+    transition: 1.9s ease-in-out;
+}
+
+#mercedes4:hover img{
+    filter: grayscale(0%);
+}
+
+.loader{
+    margin: 100px;
+}
+.loader img{
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    animation: bounce 8s infinite alternate;
+}
+.loader img:nth-child(2){
+animation-delay: 2s;
+}
+.loader img:nth-child(3){
+    animation-delay: 4s;
+}
+.loader img:nth-child(4){
+    animation-delay: 6s;
+}
+
+@keyframes bounce{
+to{
+    width: 200px;
+    height: 200px;
+    transform: translate3d(0,-50px,0);
+}    
+}
