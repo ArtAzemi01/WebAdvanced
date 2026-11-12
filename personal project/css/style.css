@@ -1,0 +1,68 @@
+body {
+    background: #101010;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+header{
+    background: #101010;
+}
+span{
+    color: #ff5e00;
+}
+.logo{
+    font-family: 'Oswald', sans-serif;
+    font-size: 32px;
+    letter-spacing: 2px;
+    margin-right: 950px;
+}
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+.navbar ul{
+    display: flex;
+}
+.navbar ul li{
+    padding: 10px;
+        list-style: none;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+}
+.contact-btn{
+    background-color: #ff5e00;
+    color: white;
+    padding: 15px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+.contact-btn:hover{
+    background-color: lightgray;
+    cursor: pointer;
+}
+#home{
+    justify-content: center;
+    align-items: center;
+    margin-left: 200px;
+    margin-top: 200px;
+}
+.more-btn{
+    background-color: #ff5e00;
+    color: white;
+    border-color: #ff5e00;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 20px;
+}
+.more-btn a{
+    text-decoration: none;
+    color: white;
+}
+.more-btn:hover{
+    background-color: lightgray;
+    cursor: pointer;
+    border-color: lightgray;
+}
