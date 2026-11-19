@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | IronFit</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+
+  <header>
+        <nav class="navbar">
+            <h2 class="logo">Iron<span>Fit</span></h2>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="index.html#programs">Programs</a></li>
+                <li><a href="index.html#trainers">Trainers</a></li>
+                <li><a href="#">Pricing</a></li>
+            </ul>
+
+            <a href="join.html" class="contact-btn">Join now</a>
+        </nav>
+    </header>
+
+    <hr>
+
+
+
+
+
+    <section class="about-section">
+
+        <div class="about-image">
+            <img src="img/about1.jpg" alt="IronFit gym">
+        </div>
+
+        <div class="about-text">
+            <h2>Who <span>We Are</span></h2>
+
+            <p>
+                IronFit is a fitness brand dedicated to helping
+                people become stronger, healthier and more confident.
+                We believe that fitness is not just about appearance,
+                but also about building discipline and a healthy lifestyle.
+            </p>
+
+            <p>
+                Our goal is to motivate everyone to work hard,
+                stay consistent and become the best version of themselves.
+            </p>
+        </div>
+
+    </section>
+
+    <hr>
+
+
+    <section class="about-section reverse">
+
+        <div class="about-image">
+            <img src="img/about2.jpg" alt="Fitness training">
+        </div>
+
+        <div class="about-text">
+            <h2>Our <span>Mission</span></h2>
+
+            <p>
+                Our mission is to inspire people to make fitness
+                part of their everyday lives. We want to encourage
+                healthy habits, physical strength and mental discipline.
+            </p>
+
+            <p>
+                We believe that every small step brings you closer
+                to achieving your goals.
+            </p>
+        </div>
+
+    </section>
+
+    <hr>
+
+
+    <section class="values-section">
+
+        <h2>What We <span>Believe In</span></h2>
+
+        <div class="values-container">
+
+            <div class="value-box">
+                <h3>01</h3>
+                <h4>Discipline</h4>
+                <p>Stay focused and committed to your goals.</p>
+            </div>
+
+            <div class="value-box">
+                <h3>02</h3>
+                <h4>Consistency</h4>
+                <p>Small efforts every day create big results.</p>
+            </div>
+
+            <div class="value-box">
+                <h3>03</h3>
+                <h4>Strength</h4>
+                <p>Build your body and become mentally stronger.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <hr>
+
+
+    <section class="join-section">
+
+        <h2>READY TO START YOUR <span>JOURNEY?</span></h2>
+
+        <p>Take the first step towards a healthier and stronger you.</p>
+
+        <a href="join.html" class="contact-btn">Join now</a>
+
+    </section>
+
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.15
+    });
+
+    document.querySelectorAll(
+        ".about-section, .values-section, .join-section"
+    ).forEach(section => {
+        section.classList.add("reveal");
+        observer.observe(section);
+    });
+</script>
+
+<script>
+    const trainerObserver = new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                    trainerObserver.unobserve(entry.target);
+                }
+            });
+        },
+        {
+            threshold: 0.15
+        }
+    );
+
+    document.querySelectorAll(
+        "#trainers .trainers-heading, #trainers .trainer"
+    ).forEach(element => {
+        element.classList.add("reveal");
+        trainerObserver.observe(element);
+    });
+</script>
+
+</body>
+
+</body>
+</html>

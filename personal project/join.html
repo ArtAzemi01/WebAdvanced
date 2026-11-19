@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join IronFit</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/join.css">
+</head>
+<body>
+
+
+
+    <header>
+        <nav class="navbar">
+            <h2 class="logo">Iron<span>Fit</span></h2>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="index.html#programs">Programs</a></li>
+                <li><a href="index.html#trainers">Trainers</a></li>
+                <li><a href="#">Pricing</a></li>
+            </ul>
+
+            <a href="join.html" class="contact-btn">Join now</a>
+        </nav>
+    </header>
+
+    <hr>
+
+
+
+    <section class="join-container">
+
+
+
+        <div class="join-form">
+
+            <h2>Membership Registration</h2>
+
+            <form action="#" method="post">
+
+                <label for="fullname">Full Name</label>
+                <input
+                    type="text"
+                    id="fullname"
+                    name="fullname"
+                    placeholder="Enter your full name"
+                    required
+                >
+
+                <label for="email">Email Address</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+                <label for="phone">Phone Number</label>
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Enter your phone number"
+                    required
+                >
+
+                <label for="membership">Choose Your Membership</label>
+                <select id="membership" name="membership" required>
+                    <option value="" disabled selected>
+                        Select a membership plan
+                    </option>
+                    <option value="basic">Basic Membership</option>
+                    <option value="standard">Standard Membership</option>
+                    <option value="premium">Premium Membership</option>
+                </select>
+
+                <label for="goal">Your Fitness Goal</label>
+                <select id="goal" name="goal" required>
+                    <option value="" disabled selected>
+                        Select your fitness goal
+                    </option>
+                    <option value="muscle">Build Muscle</option>
+                    <option value="weight-loss">Lose Weight</option>
+                    <option value="fitness">Improve Fitness</option>
+                    <option value="health">Stay Healthy</option>
+                </select>
+
+                <button type="submit" class="join-submit">
+                    JOIN NOW
+                </button>
+
+            </form>
+
+            <p class="join-message">
+                We're excited to have you as part of IronFit!
+            </p>
+
+        </div>
+
+    </section>
+
+</body>
+</html>

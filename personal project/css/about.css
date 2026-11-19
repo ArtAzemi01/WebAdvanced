@@ -1,0 +1,379 @@
+
+/* ==================================
+   IRONFIT ABOUT PAGE
+   CLEAN ANIMATION STYLE
+================================== */
+
+/* ABOUT SECTIONS */
+
+.about-section {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 40px 30px;
+
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+/* ABOUT IMAGES */
+
+.about-image {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 15px;
+    position: relative;
+    animation: aboutLeft 1s ease both;
+}
+
+.about-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 94, 0, 0.12),
+        transparent 60%
+    );
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.about-image:hover::after {
+    opacity: 1;
+}
+
+.about-image img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 15px;
+    display: block;
+
+    transition:
+        transform 0.7s ease,
+        filter 0.5s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.07);
+    filter: brightness(1.1);
+}
+
+/* ABOUT TEXT */
+
+.about-text {
+    flex: 1;
+    animation: aboutRight 1s ease both;
+}
+
+.about-text h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.about-text h2 span {
+    text-shadow: 0 0 20px rgba(255, 94, 0, 0.2);
+}
+
+.about-text p {
+    color: #cccccc;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.about-text p:hover {
+    color: white;
+}
+
+/* REVERSE SECTION */
+
+.reverse .about-image {
+    animation-name: aboutRight;
+}
+
+.reverse .about-text {
+    animation-name: aboutLeft;
+}
+
+/* SECTION DIVIDERS */
+
+body > hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(255, 94, 0, 0.6),
+        transparent
+    );
+    margin: 25px 0;
+}
+
+/* ==================================
+   VALUES SECTION
+================================== */
+
+.values-section {
+    text-align: center;
+    padding: 70px 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.values-section h2 {
+    font-size: 34px;
+    margin-bottom: 45px;
+    animation: fadeUp 0.8s ease both;
+}
+
+.values-section h2 span {
+    text-shadow: 0 0 20px rgba(255, 94, 0, 0.2);
+}
+
+.values-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.value-box {
+    flex: 1;
+    padding: 35px 20px;
+    border: 1px solid #333333;
+    border-radius: 15px;
+    background: #181818;
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+
+    animation: fadeUp 0.8s ease both;
+}
+
+.value-box:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.value-box:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.value-box:hover {
+    border-color: #ff5e00;
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(255, 94, 0, 0.12);
+}
+
+.value-box h3 {
+    color: #ff5e00;
+    font-size: 32px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.value-box:hover h3 {
+    transform: scale(1.15);
+}
+
+.value-box h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.value-box:hover h4 {
+    color: #ff5e00;
+}
+
+.value-box p {
+    color: #aaaaaa;
+    line-height: 1.7;
+}
+
+/* ==================================
+   JOIN SECTION
+================================== */
+
+.join-section {
+    text-align: center;
+    padding: 85px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.join-section::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: #ff5e00;
+    opacity: 0.08;
+    filter: blur(100px);
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.join-section h2 {
+    font-size: 34px;
+    margin-bottom: 15px;
+    position: relative;
+    animation: fadeUp 0.9s ease both;
+}
+
+.join-section h2 span {
+    text-shadow: 0 0 20px rgba(255, 94, 0, 0.3);
+}
+
+.join-section p {
+    color: #aaaaaa;
+    margin-bottom: 30px;
+    position: relative;
+    animation: fadeUp 1s ease both;
+    animation-delay: 0.2s;
+}
+
+.join-section .contact-btn {
+    display: inline-block;
+    position: relative;
+    transition: all 0.3s ease;
+    animation: fadeUp 1s ease both;
+    animation-delay: 0.4s;
+}
+
+.join-section .contact-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(255, 94, 0, 0.3);
+}
+
+/* ==================================
+   ANIMATIONS
+================================== */
+
+@keyframes aboutLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-45px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes aboutRight {
+    from {
+        opacity: 0;
+        transform: translateX(45px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==================================
+   RESPONSIVE DESIGN
+================================== */
+
+@media (max-width: 768px) {
+
+    .about-section,
+    .about-section.reverse {
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 25px;
+    }
+
+    .about-image {
+        width: 100%;
+    }
+
+    .about-image img {
+        height: 260px;
+    }
+
+    .about-text {
+        width: 100%;
+    }
+
+    .about-text h2 {
+        font-size: 28px;
+    }
+
+    .values-container {
+        flex-direction: column;
+    }
+
+    .values-section h2 {
+        font-size: 26px;
+    }
+
+    .join-section h2 {
+        font-size: 24px;
+    }
+}
+
+/* ==================================
+   ACCESSIBILITY
+================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* SCROLL REVEAL */
+
+.about-section.reveal,
+.values-section.reveal,
+.join-section.reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.about-section.reveal.show,
+.values-section.reveal.show,
+.join-section.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Prevent initial animations from conflicting with scroll reveal */
+
+.about-section.reveal .about-image,
+.about-section.reveal .about-text,
+.values-section.reveal .value-box,
+.values-section.reveal h2,
+.join-section.reveal h2,
+.join-section.reveal p,
+.join-section.reveal .contact-btn {
+    animation: none;
+}
