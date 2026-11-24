@@ -620,9 +620,7 @@ header {
     color: white;
 }
 
-/* ==================================
-   ANIMATIONS
-================================== */
+
 
 @keyframes trainersFadeUp {
     from {
@@ -636,9 +634,7 @@ header {
     }
 }
 
-/* ==================================
-   RESPONSIVE DESIGN
-================================== */
+
 
 @media (max-width: 900px) {
 
@@ -700,9 +696,7 @@ header {
     }
 }
 
-/* ==================================
-   ACCESSIBILITY
-================================== */
+
 
 @media (prefers-reduced-motion: reduce) {
     #trainers *,
@@ -729,4 +723,352 @@ header {
         opacity 0.8s ease,
         transform 0.8s ease;
 }
+
+
+
+#pricing {
+    max-width: 1400px;
+    margin: auto;
+    padding: 70px 5% 90px;
+    text-align: center;
+}
+
+
+
+.pricing-heading {
+    margin-bottom: 60px;
+    animation: fadeUp 0.9s ease both;
+}
+
+.pricing-heading h1 {
+    font-size: 40px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.pricing-heading p {
+    color: #999;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+
+
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+}
+
+
+
+.pricing-card {
+    flex: 1;
+    max-width: 370px;
+    background: #181818;
+    border: 1px solid #333;
+    border-radius: 20px;
+    padding: 35px 25px;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: all 0.4s ease;
+    animation: fadeUp 0.9s ease both;
+}
+
+.pricing-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.pricing-card:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.pricing-card:hover {
+    transform: translateY(-12px);
+    border-color: #ff5e00;
+    box-shadow: 0 15px 35px rgba(255, 94, 0, 0.15);
+}
+
+
+
+.pricing-card.popular {
+    border: 2px solid #ff5e00;
+    transform: scale(1.04);
+}
+
+.pricing-card.popular:hover {
+    transform: scale(1.04) translateY(-12px);
+}
+
+.popular-label {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ff5e00;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+
+
+.pricing-card h2 {
+    font-size: 27px;
+    margin: 10px 0;
+    transition: color 0.3s ease;
+}
+
+.pricing-card:hover h2 {
+    color: #ff5e00;
+}
+
+.plan-description {
+    color: #999;
+    font-size: 13px;
+    line-height: 1.7;
+    min-height: 65px;
+}
+
+
+
+.price {
+    font-size: 38px;
+    color: #ff5e00;
+    margin: 20px 0;
+}
+
+.price span {
+    color: #999;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.pricing-card hr {
+    border: none;
+    border-top: 1px solid #333;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px;
+    text-align: left;
+}
+
+.pricing-card ul li {
+    padding: 11px 0;
+    font-size: 14px;
+    color: #ddd;
+    border-bottom: 1px solid #292929;
+}
+
+.pricing-card ul li:first-child {
+    color: #ff5e00;
+}
+
+.pricing-card ul li.not-included {
+    color: #666;
+}
+
+
+
+.pricing-btn {
+    display: block;
+    margin-top: auto;
+    padding: 14px;
+    background: #ff5e00;
+    color: white;
+    text-decoration: none;
+    border: 2px solid #ff5e00;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.pricing-btn:hover {
+    background: transparent;
+    color: #ff5e00;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(255, 94, 0, 0.2);
+}
+
+
+
+.pricing-extra {
+    max-width: 1400px;
+    margin: auto;
+    padding: 70px 5%;
+    text-align: center;
+}
+
+.pricing-extra h2 {
+    font-size: 35px;
+    margin-bottom: 50px;
+}
+
+.benefits-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.benefit {
+    flex: 1;
+    padding: 25px;
+    background: #181818;
+    border: 1px solid #333;
+    border-radius: 15px;
+    transition: all 0.4s ease;
+}
+
+.benefit:hover {
+    transform: translateY(-10px);
+    border-color: #ff5e00;
+    box-shadow: 0 10px 30px rgba(255, 94, 0, 0.1);
+}
+
+.benefit h3 {
+    font-size: 35px;
+    color: #ff5e00;
+    margin: 0;
+}
+
+.benefit h4 {
+    font-size: 19px;
+}
+
+.benefit p {
+    color: #aaa;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+
+.pricing-footer {
+    text-align: center;
+    padding: 70px 20px;
+    background: #181818;
+    margin-top: 40px;
+}
+
+.pricing-footer h2 {
+    font-size: 32px;
+}
+
+.pricing-footer p {
+    color: #aaa;
+    margin-bottom: 30px;
+}
+
+.pricing-footer .contact-btn {
+    display: inline-block;
+}
+
+
+
+@media (max-width: 900px) {
+
+    .pricing-container {
+        gap: 20px;
+    }
+
+    .pricing-card {
+        padding: 30px 18px;
+    }
+
+    .pricing-card.popular {
+        transform: none;
+    }
+
+    .pricing-card.popular:hover {
+        transform: translateY(-12px);
+    }
+
+    .benefits-container {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+
+    #pricing {
+        padding: 50px 20px;
+    }
+
+    .pricing-container {
+        flex-wrap: wrap;
+        gap: 35px;
+    }
+
+    .pricing-card {
+        flex: 1 1 280px;
+    }
+
+    .pricing-heading h1 {
+        font-size: 32px;
+    }
+
+    .benefit {
+        flex: 1 1 250px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .pricing-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pricing-card {
+        width: 100%;
+        max-width: 380px;
+    }
+
+    .pricing-heading h1 {
+        font-size: 27px;
+    }
+
+    .pricing-heading p {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .pricing-extra h2 {
+        font-size: 27px;
+    }
+
+    .benefits-container {
+        flex-direction: column;
+    }
+
+    .pricing-footer h2 {
+        font-size: 25px;
+    }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    .pricing-card *,
+    .benefit *,
+    .pricing-footer * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
 
